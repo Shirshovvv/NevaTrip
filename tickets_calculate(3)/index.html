@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div class="container">
+        <section class="calculator">
+            <div class="selectors__wrapper">
+                <div class="selector_wrp direction">
+                    <div class="selector_info">Направление</div>
+                    <select name="route" id="route">
+                        <option value="из A в B">из A в B</option>
+                        <option value="из B в A">из B в A</option>
+                        <option value="из A в B и обратно в А">из A в B и обратно в А</option>
+                    </select>
+                </div>
+                <div class="selector_wrp time">
+                    <div class="selector_info">Время отправления</div>
+                    <input  type="text" class="timepicker" placeholder="Выберите время">
+                </div>
+                <div class="selector_wrp timeback">
+                    <div class="selector_info">Время обратного отправления</div>
+                    <input  type="text" class="back_timepicker" placeholder="Выберите время из B в А">
+                </div>
+                <div class="selector_wrp price">
+                    <div class="selector_info">Количество билетов</div>
+                    <input class="tickets_count" type="number" placeholder="Количество билетов">
+                </div>
+            </div>
+    
+            <div class="button_wrapper">
+                <button>Посчитать</button>
+            </div>
+        </section>
+        <div class="popup__wrp">
+            <div class="popup__body">
+                <div class="popup__close"><span></span></div>
+                <div class="order__info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. In distinctio numquam laudantium iste eveniet aspernatur eligendi eum debitis minima. Ad laborum quos deserunt nam aspernatur iste animi necessitatibus excepturi neque.</div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

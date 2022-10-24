@@ -1,0 +1,196 @@
+* {
+  font-family: "Open Sans", sans-serif; }
+
+body {
+  margin: 8px 0; }
+
+.cards__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 60px; }
+
+.container {
+  max-width: 1106px;
+  margin: auto;
+  padding: 0 20px; }
+
+.card {
+  border: 0.3px solid #828282;
+  border-radius: 16px; }
+  .card__img {
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden; }
+    .card__img img {
+      width: 100%; }
+  .card__content {
+    padding: 10px 15px 20px; }
+    .card__content_descr-time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px; }
+      .card__content_descr-time .time {
+        display: flex;
+        column-gap: 9px; }
+        .card__content_descr-time .time span {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          color: #9E9E9E; }
+      .card__content_descr-time .show__more_btn {
+        background: #FED74B;
+        border: 0.5px solid #CBA500;
+        border-radius: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #404040;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: all 0.3s; }
+    .card__content_descr-action {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      color: #404040; }
+    .card__content_benefs {
+      margin-top: 15px;
+      padding-left: 36px;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 10px; }
+      .card__content_benefs-item {
+        position: relative;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #4B4B4B; }
+        .card__content_benefs-item::before {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          left: -35px;
+          top: 2px;
+          background: url("/img/check.svg"); }
+        .card__content_benefs-item.time {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px; }
+        .card__content_benefs-item .time__block {
+          transition: all 0.3s;
+          display: flex;
+          column-gap: 5px;
+          flex-wrap: wrap;
+          row-gap: 7px; }
+@media(min-width:400px) {
+  .card__content_benefs-item .time__block {
+    width: 245px; } }
+          .card__content_benefs-item .time__block_item {
+            padding: 3px 4px;
+            background: #D9E8FF;
+            border-radius: 11px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #343434;
+            cursor: pointer;
+            transition: all 0.5s; }
+            .card__content_benefs-item .time__block_item:hover {
+              background: #88b7ff;
+              box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); }
+            .card__content_benefs-item .time__block_item.active {
+              background: #FED74B; }
+@media(min-width:363px) {
+  .card__content_benefs-item .time__block_item {
+    padding: 3px 10px; } }
+        .card__content_benefs-item .time__acrd.active {
+          height: 28px;
+          overflow: hidden; }
+          .card__content_benefs-item .time__acrd.active.toggleAcrd {
+            overflow: unset; }
+            .card__content_benefs-item .time__acrd.active.toggleAcrd .time__block {
+              padding: 0px 5px 5px 5px;
+              background: #ffffff;
+              box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 15px; }
+    .card__content_bottom {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 35px;
+      row-gap: 5px; }
+      .card__content_bottom-buy {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center; }
+      .card__content_bottom-ages {
+        display: flex;
+        width: 100%;
+        column-gap: 15px; }
+        .card__content_bottom-ages .age {
+          width: 40px;
+          cursor: pointer;
+          padding: 5px;
+          transition: all 0.5s; }
+          .card__content_bottom-ages .age svg {
+            pointer-events: none; }
+          .card__content_bottom-ages .age:hover {
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.5s; }
+          .card__content_bottom-ages .age.active {
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.5s; }
+            .card__content_bottom-ages .age.active svg {
+              fill: #FED74B;
+              transition: all 0.5s; }
+      .card__content_bottom .price {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: unset;
+        row-gap: unset; }
+        .card__content_bottom .price__current {
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 20px;
+          color: #000000; }
+        .card__content_bottom .price__pier {
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 20px;
+          color: #000000; }
+      .card__content_bottom-button button {
+        background: #FED74B;
+        border: 0.5px solid #CBA500;
+        border-radius: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #404040;
+        padding: 5px 41px;
+        cursor: pointer;
+        transition: all 0.3s; }
+        .card__content_bottom-button button:hover {
+          background: #d3b73a;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); }
+
+.alert {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  background: #FED74B;
+  padding: 20px;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  transition: all 1s; }
+  .alert.buy_alert {
+    top: 0;
+    transition: all 0.5s; }
